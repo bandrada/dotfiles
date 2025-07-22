@@ -1,0 +1,7 @@
+return {
+    "brianhuster/autosave.nvim",
+    event="InsertEnter",
+    opts = {
+        --vim.g.autosave_disable_inside_paths = { vim.fn.stdpath('config') }
+    }
+}
