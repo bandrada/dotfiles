@@ -2,5 +2,5 @@
 
 sudo apt update
 sudo apt upgrade
-sudo apt install \
+sudo apt-get -y install \
     curl unzip

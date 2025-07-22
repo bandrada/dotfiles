@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install \
+sudo apt-get -y install \
     default-jdk \
     nodejs \
     python3 \

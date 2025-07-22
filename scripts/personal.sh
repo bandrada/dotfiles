@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo apt install \
+sudo apt-get -y install \
     golang
 

@@ -20,7 +20,8 @@ for f in ~/dotfiles/scripts/*.sh; do
   source "$f"
 done
 
-sudo pacman -S --noconfirm stow
+#sudo pacman -S --noconfirm stow
+sudo apt-get -y install stow
 
 # Stow everything
 for d in ~/dotfiles/configs/*; do
