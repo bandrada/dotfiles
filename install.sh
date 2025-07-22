@@ -15,7 +15,7 @@ git clone https://github.com/bandrada/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 
 # Install everything
-for f in /scripts/*.sh; do
+for f in ~/dotfiles/scripts/*.sh; do
   echo -e "\nRunning installer: $f"
   source "$f"
 done
@@ -23,7 +23,7 @@ done
 sudo pacman -S --noconfirm stow
 
 # Stow everything
-for d in /configs/*; do
+for d in ~/dotfiles/configs/*; do
   echo -e "\nStowing config: $d"
   stow "$d -n"
 done
