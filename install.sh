@@ -9,6 +9,11 @@ catch_errors() {
 
 trap catch_errors ERR
 
+echo -e "\nCloning dotfiles..."
+rm -rf ~/dotfiles
+git clone https://github.com/bandrada/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+
 # Install everything
 for f in /scripts/*.sh; do
   echo -e "\nRunning installer: $f"
@@ -27,7 +32,5 @@ done
 #stow nvim
 #stow tmux
 
-# Ensure locate is up to date now that everything has been installed
-sudo updatedb
-
-gum confirm "Reboot to apply all settings?" && reboot
+gum confirm "sudo updatedb?" && sudo updatedb
+gum confirm "reboot?" && reboot
