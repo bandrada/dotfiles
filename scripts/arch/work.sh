@@ -1,10 +1,12 @@
 #!/bin/bash
 
-sudo apt install \
-    default-jdk \
-    nodejs \
-    python3 \
-    gh \
+pacman -S --noconfirm \
+  jdk-openjdk \
+  nodejs-lts-jod \
+  python \
+  github-cli \
+  sfdx-cli \
+  powershell-bin
 
 gh auth login
 
