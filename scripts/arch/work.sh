@@ -1,12 +1,12 @@
 #!/bin/bash
 
 pacman -S --noconfirm \
-  jdk-openjdk \
-  nodejs-lts-jod \
-  python \
-  github-cli \
-  sfdx-cli \
-  powershell-bin
+	jdk-openjdk \
+	nodejs-lts-jod \
+	python \
+	github-cli \
+	sfdx-cli \
+	powershell-bin
 
 gh auth login
 

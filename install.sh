@@ -4,7 +4,7 @@ set -e
 
 # Give people a chance to retry running the installation
 catch_errors() {
-  echo -e "\n\e[31m Installation failed!\e[0m"
+	echo -e "\n\e[31m Installation failed!\e[0m"
 }
 
 trap catch_errors ERR
@@ -16,8 +16,8 @@ cd ~/dotfiles
 
 # Install everything
 for f in ~/dotfiles/scripts/*.sh; do
-  echo -e "\nRunning installer: $f"
-  source "$f"
+	echo -e "\nRunning installer: $f"
+	source "$f"
 done
 
 source ~/dotfiles/config.sh

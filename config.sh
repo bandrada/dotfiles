@@ -3,14 +3,15 @@
 set -e
 
 if ! command -v stow >/dev/null 2>&1; then
-  #sudo pacman -S --noconfirm stow
-  sudo apt-get -y install stow
+	#sudo pacman -S --noconfirm stow
+	sudo apt-get -y install stow
 fi
 
 # Stow everything
-for d in ~/dotfiles/configs/*; do
-  echo -e "\nStowing config: $d"
-  stow "$d -n"
+for f in ~/dotfiles/configs/*; do
+	file=$(basename $f)
+	echo -e "\nStowing config: $file"
+	stow "$file -n"
 done
 #stow bash
 #stow ghostty
