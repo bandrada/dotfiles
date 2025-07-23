@@ -20,7 +20,7 @@ for f in ~/dotfiles/scripts/*.sh; do
 	source "$f"
 done
 
-source ~/dotfiles/config.sh
+source ~/dotfiles/stow.sh
 
 gum confirm "sudo updatedb?" && sudo updatedb
 gum confirm "reboot?" && reboot
