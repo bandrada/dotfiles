@@ -21,3 +21,6 @@ stow bash
 stow ghostty
 stow nvim
 stow tmux
+
+source $HOME/.bashrc
+source $HOME/.profile
