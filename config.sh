@@ -8,6 +8,7 @@ if ! command -v stow >/dev/null 2>&1; then
 fi
 
 # Stow everything
+rm .bashrc .profile
 for f in ~/dotfiles/configs/*; do
 	file=$(basename $f)
 	echo -e "\nStowing config: $file"
