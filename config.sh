@@ -11,5 +11,8 @@ fi
 for f in ~/dotfiles/configs/*; do
 	file=$(basename $f)
 	echo -e "\nStowing config: $file"
-	stow --dir=$HOME/dotfiles/configs --target=$HOME "$file"
+	stow --dir=$HOME/dotfiles/configs \
+		--target=$HOME \
+		--override='.*' \
+		"$file"
 done
