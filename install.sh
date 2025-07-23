@@ -20,18 +20,7 @@ for f in ~/dotfiles/scripts/*.sh; do
   source "$f"
 done
 
-#sudo pacman -S --noconfirm stow
-sudo apt-get -y install stow
-
-# Stow everything
-for d in ~/dotfiles/configs/*; do
-  echo -e "\nStowing config: $d"
-  stow "$d -n"
-done
-#stow bash
-#stow ghostty
-#stow nvim
-#stow tmux
+source ~/dotfiles/config.sh
 
 gum confirm "sudo updatedb?" && sudo updatedb
 gum confirm "reboot?" && reboot
