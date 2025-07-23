@@ -11,7 +11,7 @@ fi
 for f in ~/dotfiles/configs/*; do
 	file=$(basename $f)
 	echo -e "\nStowing config: $file"
-	stow "$file -n"
+	stow --dir ~/dotfiles/configs --target ~ --no "$file"
 done
 #stow bash
 #stow ghostty
