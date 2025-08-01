@@ -30,3 +30,10 @@ fi
 if [ -d "/usr/local/go/bin" ] ; then
     export PATH=$PATH:/usr/local/go/bin
 fi
+
+if ! command -v nvim --version >/dev/null 2>&1; then
+	echo "nvim might be missing or not in path. adding to path"
+	if [ -d "/opt/nvim-linux-x86_64/bin" ] ; then
+		PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+	fi
+fi
