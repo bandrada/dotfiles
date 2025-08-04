@@ -32,21 +32,18 @@ if [ -d "/usr/local/go/bin" ] ; then
 fi
 
 if ! command -v nvim --version >/dev/null 2>&1; then
-	echo "nvim might be missing or not in path. adding to path"
 	if [ -d "/opt/nvim-linux-x86_64/bin" ] ; then
 		PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 	fi
 fi
 
 if ! command -v zig --version >/dev/null 2>&1; then
-	echo "zig might be missing or not in path. adding to path"
 	if [ -d "/opt/zig" ] ; then
 		PATH="$PATH:/opt/zig"
 	fi
 fi
 
 if ! command -v sf --version >/dev/null 2>&1; then
-	echo "sf might be missing or not in path. adding to path"
 	if [ -d "/opt/sf/bin" ] ; then
 		PATH="$PATH:/opt/sf/bin"
 	fi
