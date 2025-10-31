@@ -1,0 +1,6 @@
+[[language]]
+name = "apex"
+scope = "source.apex"
+files-types = ["apex", "cls", "soql", "sosl"]
+formatter = { command = "java", args = ["--jar", ".local/share/apex-jorje-lsp.jar"]}
+# from nvim config -> os.getenv("HOME") .. "/.local/share/nvim/mason/packages/apex-language-server/extension/dist/apex-jorje-lsp.jar
