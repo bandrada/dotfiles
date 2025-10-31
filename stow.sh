@@ -19,6 +19,7 @@ fi
 
 stow bash
 stow ghostty
+stow helix
 stow nvim
 stow tmux
 
