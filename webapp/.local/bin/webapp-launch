@@ -9,4 +9,9 @@ google-chrome* | brave-browser* | microsoft-edge* | opera* | vivaldi* | helium*)
 *) browser="chromium.desktop" ;;
 esac
 
-exec setsid uwsm-app -- $(sed -n 's/^Exec=\([^ ]*\).*/\1/p' {~/.local,~/.nix-profile,/usr}/share/applications/$browser 2>/dev/null | head -1) --app="$1" "${@:2}"
+#exec setsid -- $(sed -n 's/^Exec=\([^ ]*\).*/\1/p' /usr/share/applications/$browser 2>/dev/null | head -1) --app="$1" "${@:2}"
+#exec xdg-open "$1" #opens browser
+exec "$(sed -n 's/^Exec=\([^ ]*\).*/\1/p' /usr/share/applications/$browser ~/.local/share/applications/$browser 2>/dev/null | head -1)" --app="$1" "${@:2}"
+#nohup "$(sed -n 's/^Exec=\([^ ]*\).*/\1/p' /usr/share/applications/$browser ~/.local/share/applications/$browser 2>/dev/null | head -1)" --app="$1" "${@:2}" >/dev/null 2>&1 &
+#exit
+
