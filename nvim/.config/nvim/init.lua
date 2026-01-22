@@ -197,8 +197,6 @@ vim.keymap.set('n', '<leader>st', function()
   vim.cmd.vnew()
   vim.cmd.term()
   job_id = vim.bo.channel
-  vim.fn.chansend(job_id, { 'pwsh\r\n' })
-  vim.fn.chansend(job_id, { 'clear\r\n' })
   vim.cmd.startinsert()
   vim.cmd.wincmd 'J'
   vim.api.nvim_win_set_height(0, 15)
