@@ -208,8 +208,10 @@ end)
 -- define additional filetypes
 vim.filetype.add {
   extension = {
+    apex = 'apex',
     cls = 'apex',
     trigger = 'apex',
+    soql = 'soql',
   },
 }
 
@@ -985,7 +987,7 @@ require('lazy').setup({
     build = ':TSUpdate',
     lazy = false,
     config = function()
-      local filetypes = { 'apex', 'bash', 'diff', 'html' }
+      local filetypes = { 'apex', 'bash', 'css', 'diff', 'html', 'js', 'soql', 'xml' }
       require('nvim-treesitter').install(filetypes)
       vim.api.nvim_create_autocmd('FileType', {
         pattern = filetypes,
