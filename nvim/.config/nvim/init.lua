@@ -205,6 +205,14 @@ vim.keymap.set('n', '<leader>st', function()
   vim.api.nvim_win_set_height(0, 15)
 end)
 
+-- define additional filetypes
+vim.filetype.add {
+  extension = {
+    cls = 'apex',
+    trigger = 'apex',
+  },
+}
+
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
@@ -719,10 +727,17 @@ require('lazy').setup({
             },
           },
         },
-        apex_ls = {
+        ['apex-language-server'] = {
+          apex_enable_semantic_errors = true,
+          apex_enable_completion_statistics = false,
           filetypes = {
             'apex',
             'cls',
+          },
+          cmd = {
+            'java',
+            '-jar',
+            '/home/bandrada/.local/share/nvim/mason/share/apex-language-server/apex-jorje-lsp.jar',
           },
         },
       }
