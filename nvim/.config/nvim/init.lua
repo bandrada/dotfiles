@@ -986,7 +986,7 @@ require('lazy').setup({
     build = ':TSUpdate',
     lazy = false,
     config = function()
-      local filetypes = { 'apex', 'bash', 'css', 'diff', 'html', 'js', 'soql', 'xml' }
+      local filetypes = { 'apex', 'bash', 'css', 'diff', 'html', 'js', 'lua', 'soql', 'xml' }
       require('nvim-treesitter').install(filetypes)
       vim.api.nvim_create_autocmd('FileType', {
         pattern = filetypes,
